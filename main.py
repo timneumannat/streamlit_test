@@ -20,7 +20,7 @@ subprocess.run('git config --global pack.threads "1"', shell=True, check=True)
 
 import streamlit as st
 
-#openai_key = st.secrets["openai"]["api_key"]
+openai_key = st.secrets["openai"]["api_key"]
 
 import os
 from pathlib import Path
