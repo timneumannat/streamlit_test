@@ -85,7 +85,7 @@ def load_data(FAISS_STORAGE_PATH, METADATA_STORAGE_PATH):
     Extracts and splits text from a PDF into embeddings, stores in session state."""
     
     # Initialize the same embedding model used for storage
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
     
     knowledge_base = FAISS.load_local(FAISS_STORAGE_PATH, embeddings, 
                                       allow_dangerous_deserialization=True)
