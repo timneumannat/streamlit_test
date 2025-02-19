@@ -86,7 +86,7 @@ def load_data(FAISS_STORAGE_PATH, METADATA_STORAGE_PATH):
     
     # Initialize the same embedding model used for storage
     embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
-    
+    st.write(FAISS_STORAGE_PATH)
     knowledge_base = FAISS.load_local(FAISS_STORAGE_PATH, embeddings, 
                                       allow_dangerous_deserialization=True)
 
